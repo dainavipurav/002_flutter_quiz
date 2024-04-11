@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StyledText extends StatelessWidget {
   final String text;
@@ -9,7 +10,7 @@ class StyledText extends StatelessWidget {
   Widget build(context) {
     return Text(
       text,
-      style: TextStyle(
+      style: GoogleFonts.lato(
         color: Colors.white,
         fontSize: fontSize,
       ),
