@@ -16,14 +16,17 @@ class _QuestionsScreen extends State<QuestionsScreen> {
 
   @override
   Widget build(context) {
-    return SizedBox(
+    return Container(
+      margin: const EdgeInsets.all(40),
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
             currentQuestion.text,
             style: const TextStyle(color: Colors.white),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 30),
           ...currentQuestion.answers.map((answer) {
