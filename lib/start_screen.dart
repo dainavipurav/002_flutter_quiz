@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import 'styled_text.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  final void Function() startQuiz;
+  const StartScreen(this.startQuiz, {super.key});
 
   @override
   Widget build(context) {
@@ -34,9 +33,8 @@ class StartScreen extends StatelessWidget {
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.zero),
               ),
-              padding: const EdgeInsets.all(20),
             ),
-            onPressed: () {},
+            onPressed: startQuiz,
             label: const Text('Start Quize'),
             icon: const Icon(Icons.arrow_right_alt),
           )
